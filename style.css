@@ -1,0 +1,97 @@
+:root {
+    --border-size: 2px;
+    --duration: 250ms;
+    --ease: cubic-bezier(0.215, 0.61, 0.355, 1);
+    --font-family: "Roboto";
+    --color-primary: white;
+    --color-secondary: black;
+    --color-tertiary: dodgerblue;
+    --shadow: rgba(0, 0, 0, 0.1);
+    --space: 10px;
+  }
+*{
+    /*For CSS debugging*/
+    /* border: solid 1px red; */
+}
+body{
+    background-color: #DFF6FF;
+    font-family: 'Roboto', sans-serif;
+}
+.container{
+    margin: auto;
+    width: 27%;
+    padding: 0px;
+    text-align: center;
+}
+.board-container{
+    border: 2px solid black;
+    width: 500px;
+    height: 500px;
+    margin: auto;
+}
+.board{
+    display: grid;
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    background-color: white;
+    cursor: crosshair;
+}
+.buttons{
+    display: flex;
+    width: 52%;
+    box-shadow: var(--shadow) 4px 4px;
+}
+.buttons button {
+    flex-grow: 1;
+    cursor: pointer;
+    position: relative;
+    padding:
+      calc(var(--space) / 1.125)
+      var(--space)
+      var(--space);
+    border: var(--border-size) solid black;
+    color: var(--color-secondary);
+    background-color: var(--color-primary);
+    font-size: 1.5rem;
+    font-family: var(--font-family);
+    text-transform: lowercase;
+    text-shadow: var(--shadow) 2px 2px;
+    transition: flex-grow var(--duration) var(--ease);
+  }
+.buttons button + button {
+    border-left: var(--border-size) solid black;
+    margin-left: calc(var(--border-size) * -1);
+  }
+.buttons button:hover,
+.buttons button:focus {
+    flex-grow: 2;
+    color: white;
+    outline: none;
+    text-shadow: none;
+    background-color: var(--color-secondary);
+ }
+.buttons button:focus {
+    outline: var(--border-size) dashed var(--color-primary);
+    outline-offset: calc(var(--border-size) * -3);
+  }
+.buttons:hover button:focus:not(:hover) {
+    flex-grow: 1;
+    color: var(--color-secondary);
+    background-color: var(--color-primary);
+    outline-color: var(--color-tertiary);
+  }
+.buttons button:active {
+    transform: translateY(var(--border-size));
+  }
+.btns-flex-container{
+    display: flex;
+    text-align: center;
+    /* margin-left: 216px; */
+    margin-top: 15px;
+}
+.slider-container{
+    display: flex;
+    /* text-align: center; */
+    margin-top: 15px;
+}

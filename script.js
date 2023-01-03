@@ -1,4 +1,7 @@
 let color = "black";
+let slider =  document.querySelector("#slider");
+let valueSpan = document.querySelector("#valueSpan");
+
 
 function generateBoard(size){
     let board = document.querySelector(".board");
@@ -17,6 +20,7 @@ function generateBoard(size){
 
 generateBoard(16);
 
+//Change the number of divs inside the board through the range input 
 function changeSize(input){
     generateBoard(input);
 }
@@ -34,3 +38,9 @@ function clearBoard(){
     let cells = board.querySelectorAll("div");
     cells.forEach((div) => div.style.backgroundColor = "white");
 }
+
+//Slider value preview
+valueSpan.textContent = `${slider.value}x${slider.value}`; 
+slider.addEventListener("input", (event) => {
+    valueSpan.textContent = `${event.target.value}x${event.target.value}`;
+  })

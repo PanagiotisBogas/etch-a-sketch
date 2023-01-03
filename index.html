@@ -23,7 +23,9 @@
             </div>
         </div>
         <div class="slider-container">
-            <input type="range" id="slider" min="2" max="100" value="16" onchange="changeSize(this.value);">
+            <input type="range" id="slider" min="2" max="100" value="16" onchange="changeSize(this.value);"" onchange="updateTextInput(this.value);" >
+            <span id="valueSpan"></span>
+            <span>&nbsp</span>
             Set board size
         </div>
     </div>

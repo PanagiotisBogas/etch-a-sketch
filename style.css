@@ -39,7 +39,7 @@ body{
 }
 .buttons{
     display: flex;
-    width: 52%;
+    width: 100%;
     box-shadow: var(--shadow) 4px 4px;
 }
 .buttons button {
@@ -87,11 +87,9 @@ body{
 .btns-flex-container{
     display: flex;
     text-align: center;
-    /* margin-left: 216px; */
     margin-top: 15px;
 }
 .slider-container{
     display: flex;
-    /* text-align: center; */
     margin-top: 15px;
 }
